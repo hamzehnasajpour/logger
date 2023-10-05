@@ -1,4 +1,4 @@
-#include "Syslog.h"
+#include "logger.h"
 #include <iostream>
 
 bool Syslog::logToStdout_ = false;

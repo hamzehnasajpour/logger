@@ -1,5 +1,5 @@
-#ifndef SYSLOG_H
-#define SYSLOG_H
+#ifndef _LOGGER_H_
+#define _LOGGER_H_
 
 #include <string>
 #include <syslog.h>
@@ -86,4 +86,4 @@ private:
 
 };
 
-#endif // SYSLOG_H
+#endif // _LOGGER_H_
