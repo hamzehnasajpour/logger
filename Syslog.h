@@ -20,6 +20,14 @@ private:
 
 class Logger {
 public:
+    static void initialize(int logLevel, const std::string& appName, bool logToStdout){
+        Syslog::initialize(logLevel, appName, logToStdout);
+    }
+
+    static void close(){
+        Syslog::close();
+    }
+
     template<typename... Args>
         static void debug(Args&&... args) {
             loggToSyslog(LOG_DEBUG, std::forward<Args>(args)...);
