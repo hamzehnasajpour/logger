@@ -71,7 +71,6 @@ public:
 private:
     template<typename... Args>
         static void loggToSyslog(int logLevel, Args&&... args) {
-            int logPriorityLevel = logLevel & LOG_PRIMASK;
             std::string message = argsToString(std::forward<Args>(args)...);
             Syslog::log(logLevel, message);
         }
